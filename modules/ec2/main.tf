@@ -35,8 +35,10 @@ resource "aws_instance" "gpu_instance" {
 
               OLLAMA_HOST=0.0.0.0 ollama serve
             
-              # Iniciar o Ollama e baixar o modelo
-              ollama pull llama3.2:1b
+              sleep 30
+
+              # Baixar o modelo
+              ollama pull llama3.2:1b | tee -a /var/log/ollama.log
               
               EOF
 
