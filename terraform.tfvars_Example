@@ -1,0 +1,5 @@
+vpc_id      = "vpc-12345678"
+instance_type     = "g4dn.xlarge"
+subnet_id         = "subnet-12345678"
+volume_size       = 500
+instance_name     = "ec2-gpu-instance"
